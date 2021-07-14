@@ -36,7 +36,7 @@ a{
 header{
     height: 80%;
     background-color: #2D25A0;
-    padding: 80px 130px;
+    padding: 80px 175px;
     width: 100%;
     
 }
@@ -106,7 +106,7 @@ header{
 /* Card section */
 
 .card-group{
-    padding: 30px 130px;
+    padding: 80px 175px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 30px;
     grid-column-gap: 30px;
@@ -131,8 +131,8 @@ header{
 }
 
 /* Winner section */
-.winner{
-    padding: 30px 130px;
+.about{
+    padding: 80px 175px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +165,7 @@ header{
 
 
 .football-gallery{
-    padding: 30px 130px;
+    padding: 80px 175px;
 }
 .football-gallery h1{
     text-align: center;
@@ -240,16 +240,25 @@ footer ul{
 
 }
 footer ul li{
-    margin-right:10px;
+    margin-right:15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 }
 footer ul li a{
-    padding: 10px;
+    /* padding: 10px; */
     border-radius:100%;
     color: #5a5757;
-    background-color: #ccc;
-    font-size: 15px;
+    /* background-color: #ccc; */
+    font-size: 20px;
 }
 
+
+/* RESPONSIVE CODE STARTS HERE */
 
 
 /* 

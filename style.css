@@ -4,10 +4,14 @@
 }
 body{
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
    
 }
-
+div{
+    margin: 0;
+    padding: 0;
+}
 
 .flexible-area{
     display: flex;
@@ -32,17 +36,14 @@ a{
 header{
     height: 80%;
     background-color: #2D25A0;
-    padding: 60px 150px;
+    padding: 80px 130px;
     width: 100%;
-
     
 }
 
 
 
 /* Top Banner part */
-
-
 .top-banner{
   
     display: grid;
@@ -91,7 +92,7 @@ header{
     display: flex;
 }
 .header-img img{
-    width: 90%;
+    width: 80%;
     justify-content: center;
     align-items: center;
     transition: all .2s ;
@@ -105,7 +106,7 @@ header{
 /* Card section */
 
 .card-group{
-    padding: 60px 150px;
+    padding: 30px 130px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 30px;
     grid-column-gap: 30px;
@@ -125,16 +126,106 @@ header{
 }
 .card p{
     text-align: justify ;
+
+
 }
+
+/* Winner section */
+.winner{
+    padding: 30px 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cup{
+    display: flex;
+    justify-content: center;
+}
+.cup img{
+    width: 20%;
+    animation-name: cup-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cup-animation {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(30deg);}
+    50%  {transform: rotate(0deg);}
+    75%  {transform: rotate(-30deg);}
+    100% {transform: rotate(0deg);}
+  }
+.winner-content p{
+    text-align: justify;
+    margin:50px 0px;
+}
+
+
+/* Gallery Section */
+
+
+.football-gallery{
+    padding: 30px 130px;
+}
+.football-gallery h1{
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 2rem;
+}
+
+.gallery{
+
+	display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	flex-wrap: wrap;
+	margin: -1rem -1rem;
+}
+.gallery-img{
+	flex: 1 0 2rem;
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;  
+    position: relative; 
+}
+
+.gallery-img img{
+    display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+.gallery-img img:hover {
+	transform: scale(1.15);
+}
+
+.gallery-img::after{
+    content:"";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(11, 3, 37);
+    opacity: 0.5;
+    transition: top 0.5s;
+    top:0%;   
+}
+
+.gallery-img:hover::after{
+   top:100%;
+
+}
+
+
+
 
 /* Footer */
 footer{
-
-    padding: 60px 150px;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top:50px;
 }
 
 footer img{
@@ -143,13 +234,13 @@ footer img{
 footer ul{
     display: flex;
     list-style: none;
-    justify-content:space-around;
+    justify-content:center;
     align-items: center;
     width: 20%;
 
 }
 footer ul li{
-    /* margin-right:10px; */
+    margin-right:10px;
 }
 footer ul li a{
     padding: 10px;
@@ -158,3 +249,453 @@ footer ul li a{
     background-color: #ccc;
     font-size: 15px;
 }
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    header{
+      width: 100%;
+    }
+    
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+
+  
+    /* Top Banner part */
+    header{
+      width: 100%;
+    }
+    .top-banner{
+    
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: start;
+        align-items: start; 
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 80%;
+    }
+    
+    .title h1{
+        color: #fff;
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+
+    .btn{
+        color: #fff;
+        background-color: #E02C6D;
+        padding:15px 28px;
+        font-size: 16px;
+        margin-bottom: 30px;
+       
+        
+    }
+       .header-img img{
+            width: 90%;
+        }
+
+               /* card section */
+        
+       .card-group{
+        padding: 20px;
+       grid-template-columns: 1fr 1fr;
+         grid-row-gap: 20px;
+        grid-column-gap: 20px;
+
+    }
+
+    
+    /* Cup */
+
+    .winner, .cup{
+        
+        flex-direction: column;
+        
+    }
+
+      /* Gallery */
+
+      .football-gallery{
+        padding: 50px 20px;
+    }
+
+    
+    .gallery{
+
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-wrap: wrap;
+        margin: -1rem -1rem;
+    }
+
+    .gallery-img{
+         flex: 1 0 1rem;
+         margin: 1rem;
+         box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+         overflow: hidden;   
+     }
+     .gallery-img img{
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: transform 400ms ease-out;
+     }
+        
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+
+    
+    
+    /* Top Banner part */
+    header{
+      width: 100%;
+    }
+    .top-banner{
+    
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: start;
+        align-items: start; 
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 80%;
+    }
+    
+    .title h1{
+        color: #fff;
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+
+    .btn{
+        color: #fff;
+        background-color: #E02C6D;
+        padding:15px 28px;
+        font-size: 16px;
+        margin-bottom: 30px;
+       
+        
+    }
+    .header-img img{
+        width: 90%;
+    }
+
+    /* card section */
+
+    .card-group{
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+        grid-row-gap: 20px;
+    grid-column-gap: 20px;
+
+    }
+
+
+    /* Cup */
+
+    .winner, .cup{
+        
+        flex-direction: column;
+        
+    }
+
+      /* Gallery */
+
+      .football-gallery{
+        padding: 50px 20px;
+    }
+
+    
+    .gallery{
+
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        margin: -1rem -1rem;
+    }
+
+    .gallery-img{
+         flex: 1 0 1rem;
+         margin: 1rem;
+         box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+         overflow: hidden;   
+     }
+     .gallery-img img{
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: transform 400ms ease-out;
+     }
+            
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+  
+
+    /* Top Banner part */
+    header{
+      width: 100%;
+    }
+    .top-banner{
+    
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: start;
+        align-items: start; 
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 80%;
+    }
+    
+    .title h1{
+        color: #fff;
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+
+    .btn{
+        color: #fff;
+        background-color: #E02C6D;
+        padding:15px 28px;
+        font-size: 16px;
+        margin-bottom: 30px;
+       
+        
+    }
+    .header-img img{
+        width: 90%;
+    }
+
+       /* card section */
+        
+       .card-group{
+        padding: 20px;
+       grid-template-columns: 1fr 1fr;
+         grid-row-gap: 20px;
+        grid-column-gap: 20px;
+
+    }
+
+    
+    /* Cup */
+
+    .winner, .cup{
+        
+        flex-direction: column;
+        
+    }
+
+        /* Gallery */
+
+        .football-gallery{
+        padding: 50px 20px;
+    }
+
+    
+    .gallery{
+
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        margin: -1rem -1rem;
+    }
+
+    .gallery-img{
+            flex: 1 0 1rem;
+            margin: 1rem;
+            box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+            overflow: hidden;   
+        }
+        .gallery-img img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms ease-out;
+        }
+        
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+
+    
+
+        /* Top Banner part */
+        header{
+          width: 100%;
+          padding: 50px 20px;
+        }
+        .top-banner{
+        
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: start;
+            align-items: start; 
+        }
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            width: 80%;
+        }
+        
+        .title h1{
+            color: #fff;
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+
+        .btn{
+            color: #fff;
+            background-color: #E02C6D;
+            padding:15px 28px;
+            font-size: 16px;
+            margin-bottom: 30px;
+           
+            
+        }
+        .header-img img{
+            width: 90%;
+        }
+
+        /* card section */
+        
+            .card-group{
+                padding: 20px;
+               grid-template-columns: 1fr;
+                 grid-row-gap: 20px;
+                grid-column-gap: 20px;
+
+            }
+
+        /* Cup */
+
+        .winner, .cup{
+            padding: 50px 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .cup img{
+            width: 50%;
+        }
+
+        /* Gallery */
+
+        .football-gallery{
+            padding: 50px 20px;
+        }
+
+        
+        .gallery{
+
+            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-wrap: wrap;
+            margin: -1rem -1rem;
+        }
+
+        .gallery-img{
+             flex: 1 0 1rem;
+             margin: 1rem;
+             box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+             overflow: hidden;   
+         }
+         .gallery-img img{
+             display: block;
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             transition: transform 400ms ease-out;
+         }
+
+   
+        
+  
+
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+

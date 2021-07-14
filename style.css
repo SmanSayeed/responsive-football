@@ -1,0 +1,160 @@
+/* Global CSS */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+
+.flexible-area{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+
+.grid-area{
+   display: grid;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* header */
+
+header{
+    height: 80%;
+    background-color: #2D25A0;
+    padding: 60px 150px;
+    width: 100%;
+
+    
+}
+
+
+
+/* Top Banner part */
+
+
+.top-banner{
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.title h1{
+    color: #fff;
+    font-weight: bold;
+    font-size: 4em;
+}
+.btn{
+    color: #fff;
+    background-color: #E02C6D;
+    padding:15px 28px;
+    font-size: 16px;
+    animation: button-animation .35s infinite alternate;
+	transform-origin: center;
+    transition: all .2s ;
+    
+}
+
+.btn:hover {
+    transform: skew(10deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation:none;
+}
+
+/* button animation */
+@keyframes button-animation{
+	to { transform: scale(0.9); }
+}
+
+.btn i{
+    margin-left:10px
+}
+.header-img{
+    display: flex;
+}
+.header-img img{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ;
+}
+.header-img img:hover{
+    /* transform: skew(-30deg); */
+    transform: rotate(30deg);
+    
+}
+
+/* Card section */
+
+.card-group{
+    padding: 60px 150px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+
+}
+
+.card{
+    padding: 16px;
+    box-shadow: 1px 1px 20px 3px #999595;
+    background-color: #fff;
+}
+.card img{
+    width: 100%;
+}
+.card h2{
+    font-weight: bolder;
+}
+.card p{
+    text-align: justify ;
+}
+
+/* Footer */
+footer{
+
+    padding: 60px 150px;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    width: 50%;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    justify-content:space-around;
+    align-items: center;
+    width: 20%;
+
+}
+footer ul li{
+    /* margin-right:10px; */
+}
+footer ul li a{
+    padding: 10px;
+    border-radius:100%;
+    color: #5a5757;
+    background-color: #ccc;
+    font-size: 15px;
+}
